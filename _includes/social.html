@@ -64,6 +64,9 @@
             {%- if site.gitlab_username -%}
             <a href="https://gitlab.com/{{ site.gitlab_username }}" title="GitLab"><i class="fab fa-gitlab"></i></a>
             {% endif %}
+            {%- if site.gitlab_selfhosted -%}
+            <a rel="me" href="https://{{ site.gitlab_selfhosted }}" title="GitLab"><i class="fab fa-gitlab"></i></a>
+            {% endif %}
             {%- if site.dblp_url -%}
             <a href="{{ site.dblp_url }}" title="DBLP"><i class="ai ai-dblp"></i></a>
             {% endif %}
@@ -99,4 +102,7 @@
             {% endif %}
             {%- if site.rss_icon -%}
             <a href="{{ site.baseurl }}/feed.xml" title="RSS Feed"><i class="fas fa-rss-square"></i></a>
+            {% endif %}
+            {%- if site.pixelfed -%}
+            <a rel="me" href="https://{{ site.pixelfed  }}" title="Pixelfed"><i class="fas fa-camera-retro"></i></a>
             {% endif %}

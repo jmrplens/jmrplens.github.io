@@ -1,6 +1,23 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+Tecniacústica:
+  url: http://www.sea-acustica.es/
 
-"PhysRev":
-  url: https://journals.aps.org/
+VoiceCoil:
+  url: https://audioxpress.com/page/Voice-Coil-Magazine
+
+ICE-UA:
+  url: https://web.ua.es/es/ice/instituto-de-ciencias-de-la-educacion.html
+
+ECSSMET:
+  url: https://www.ecssmet.com/
+
+Euronoise:
+  url: http://www.spacustica.pt/euronoise2021/
+
+COST:
+  url: https://www.cost.eu/
+
+HarvardX:
+  url: https://www.edx.org/school/harvardx
+
+IBM:
+  url: https://www.edx.org/school/ibm

@@ -1,26 +1,39 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: >
+  <strong>PhD Student at <a href="https://www.upv.es/">UPV</a> <small>Polytechnic University of Valencia</small>
+  <br> 
+  <strong>Work:</strong>  <a href="https://www.i3m-detectors.i3m.upv.es/research/ultrasound-medical-and-industrial-laboratory-umil/">i3M-CSIC</a> <small>Ultrasound Medical and Industrial Laboratory</small>
+   
+
+description: I'm a researcher and PhD Student. My current interests are engineering in its broadest sense of the word and research and development in any engineering area. I love learning new disciplines and being able to contribute with my knowledge from other areas.
 
 profile:
   align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image: mehome.jpg
+  image_cicular: false # crops the image to make it circular
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Valencia, Spain</p> 
+    <p>jmrplens[at]protonmail[dot]com</p>
 
-news: true  # includes a list of news items
-latest_posts: true  # includes a list of the newest posts
-selected_papers: true # includes a list of papers marked as "selected={true}"
+news: false  # includes a list of news items
+latest_posts: false  # includes a list of the newest posts
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+<h2>Hi!</h2> 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I completed <strong>BSc Telecommunications</strong> from [University of Alicante](https://www.ua.es/en) and <strong>MSc Acoustics</strong> from [Polytechnic University of Valencia](http://www.upv.es/en). 
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I've worked as a researcher at the <a href="http://igic.webs.upv.es/index.php?option=com_content&view=article&id=22">IGIC</a> (Waves in complex media group) carrying out a project for the European Space Agency (<a href="https://www.esa.int/">ESA</a>) to <strong>reduce noise on the VEGA rocket launch pad</strong>. I have also been researching at <a href="https://www.i3m-detectors.i3m.upv.es/research/ultrasound-medical-and-industrial-laboratory-umil/">i3M/UMIL</a> (Ultrasound Medical and Industrial Laboratory) in the area of <strong>acoustic metamaterials</strong> and <strong>ultrasound</strong>. You can see my publications [here](/publications/).
+
+My <strong>current interests</strong> are engineering in its broadest sense of the word and research and development in any engineering area. <strong>I love learning new disciplines</strong> and being able to contribute with my knowledge from other areas.
+
+Before working in reasearch I was working as a sound technician for about 6 years. The knowledge acquired in installing, repairing and adjusting systems has facilitated the <strong>development of the experimental systems</strong> that I have needed (and will need) in my research.
+
+Also I like to <strong>develop tools</strong> and applications to perform tasks more easily, I always try to make all my work public so that other people can take advantage of it and improve it (I am sure it can be improved). Visit my profile on [Github](https://github.com/jmrplens). Obviously I'm not a professional developer but I try.
+
+In my spare time, I like cycling (MTB/enduro), hiking with friends and, why deny it, occasionally going out to party and rock concerts.
