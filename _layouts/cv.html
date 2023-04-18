@@ -9,9 +9,18 @@ layout: default
             <p class="post-description">{{ page.description }}</p>
           </header>
 
+          <h4>Table of contents</h4>
+          <ul class="cv_toc">
+            <li class="cv_toc_item"><a href="#general">General information</a></li>
+            <li class="cv_toc_item"><a href="#formal_education">Formal education</a></li>
+            <li class="cv_toc_item"><a href="#experience">Experience</a></li>
+            <li class="cv_toc_item"><a href="#skills">Other knowledge and skills</a></li>
+          </ul>
+
           <article>
             <div class="cv">
               {% for entry in site.data.cv %}
+                <a class="anchor" id="{{ entry.anchor }}"></a>
                 <div class="card mt-3 p-3">
                   <h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
                   <div>
@@ -23,6 +32,8 @@ layout: default
                     {% include cv/nested_list.html %}
                   {% elsif entry.type == "time_table" %}
                    {% include cv/time_table.html %}
+                  {% elsif entry.type == "skills" %}
+                   {% include cv/skills.html %}
                   {% else %}
                     {{ entry.contents }}
                   {% endif %}

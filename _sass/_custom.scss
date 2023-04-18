@@ -16,15 +16,10 @@ html[data-theme='dark'] {
 	/*************************************************
  	* CV
  	**************************************************/
-	td.cv, li.cardcv {
-		background-color: var(--global-code-bg-color)
+	table.cv {
+		background-color: transparent!important;
 	}
-	div.cardcv {
-		background-color: var(--global-code-bg-color);
-		border: solid 1px var(--global-divider-color);
-		//box-shadow: 0 4px 10px 0 rgba(255,255,255, 0.1), 0 4px 20px 0 rgba(255,255,255, 0.04);
-	}
-
+	
 	.list-group-flush {
 
   		> .list-group-item-cv {
@@ -37,9 +32,13 @@ html[data-theme='dark'] {
   		}
 	}
 
-	.abbr {
-    color: var(--global-text-color)!important;
+	.publications ol.bibliography li .abbr abbr,
+	.publications ol.bibliography li .abbr abbr a {
+    color: var(--global-bg-color)!important;
 	}
+	.cv .card .list-group-item .badge {
+    color: var(--global-bg-color) !important;
+}
 
 }
 
@@ -62,9 +61,7 @@ html[data-theme='dark'] {
 }
 
 // General
-ul ul {
-	list-style-type: disc;
-}
+
 
 // Title
 .title {
@@ -72,14 +69,7 @@ ul ul {
 }
 
 // About
-.post-title{
-	font-family: "Roboto Slab", "Times New Roman", serif;
-}
-.tableabout{
-}
-.tableabouttd{
-	font-size: 1rem;
-}
+
 
 /*******************************************************************************
  * HEAD
@@ -89,51 +79,10 @@ ul ul {
 	font-size: 1.2rem!important;
 }
 
-// Button theme switch
-a.tooglemode {
-	font-size: 0.86rem!important;
-	color: var(--global-theme-color)!important;
-	font-family: "Roboto",sans-serif;
-	font-weight: 400!important;
-}
-i.fasicon {
-    font-weight: 400;
-    padding-top: 12px!important;
-}
-
-// Name
-.navbar-brand.title.font-weight-lighter{
-	font-weight: 300!important;
-}
 
 /*******************************************************************************
  * Scholar / Bibliography
  ******************************************************************************/
-// Bibtex code style
-pre.bibtex {
-	color: var(--global-theme-color);
-	background-color: var(--global-code-bg-color);
-	border-radius: 6px;
-	padding: 6px 12px;
-	font-size: 0.875em!important;
-}
-
-// Bib type style
-p.bibtitle {
-	color: var(--global-theme-color);
-    	font-weight: 400;
-    	font-size: 1.5em;
-    	text-align: center;
-    	border-bottom: 1px solid #bbb;
-}
-
-// Year for every paper
-h2.yearbib {
-    color: #e8e8e8;
-    //border-top: 1px solid #e8e8e8;
-    //padding-top: 0.5rem;
-    text-align: right;
-}
 
 // Author font
 div.author {
@@ -145,39 +94,11 @@ div.periodical {
 	font-size: 0.9rem;
 }
 
-// Title font
-.publications ol.bibliography li .title {
-    font-weight: normal;
-    font-family: "Roboto Slab", "Times New Roman", serif;
-}
-
-div.bibtex.hidden {
-   	border: none;
-}
-
-div.bibtex.hidden.open {
-    border-color: none;
-}
-
 /*******************************************************************************
  * CV
  ******************************************************************************/
 
-.cv {
-    margin-bottom: 0px!important;
-}
 
-// Card / Container style
-div.cardcv {
-	background-color: var(--global-bg-color);
-	color: var(--global-text-color);
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-}
-
-// Title Card
-.cv h3 {
-	color: var(--global-theme-color);
-}
 
 // Stickers left
 span.abbrcv{
@@ -191,19 +112,19 @@ span.abbrcv{
 	}
 }
 
+table.cv {
+		background-color: transparent!important;
+	}
+
 // 
-td.cv, li.cardcv {
-	color: var(--global-text-color);
-	background-color: var(--global-bg-color);
+a.anchor {
+    display: block;
+    position: relative;
+    top: -50px;
+    visibility: hidden;
 }
 
 // List type
-.list_cv {
-    padding: 0.2rem 1.25rem;
-}
-.list_no_bullet{
-	list-style-type: none;
-}
 
 .cvlocation{
 	font-size: 0.7rem;
@@ -213,6 +134,43 @@ td.cv, li.cardcv {
 	color: var(--global-theme-color);
 	font-size: 0.8rem;
 }
+.iconinstitution{
+	color: var(--global-theme-color);
+	font-size: 0.95rem;
+	    margin-right: 0.3rem;
+}
+.icondepartment{
+	color: var(--global-theme-color);
+	font-size: 0.8rem;
+	margin-right: 0.3rem;
+}
+.tableiconcv {
+	margin-bottom: 1rem;
+    //margin-left: 2rem!important;
+} 
+td.department{
+	font-size: 0.8rem;
+}
+.containerlinkscv {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+.containerlinkbutton {
+	margin-right: 0.5rem;
+}
+.containercvpdf {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 .colcv{
 	padding-right: 0;
     padding-left: 0;
@@ -228,8 +186,8 @@ td.cv, li.cardcv {
     font-size: 1rem;
 }
 .btncv {
-	color: var(--global-text-color);
-    border: 1px solid var(--global-text-color);
+	color: var(--global-text-color)!important;
+    border: 1px solid var(--global-text-color)!important;
     border-radius: 0.125rem;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -237,17 +195,52 @@ td.cv, li.cardcv {
     padding-bottom: 0.25rem;
     text-decoration: none;
     font-weight: 400;
-    font-size: .64rem;
+    font-size: .7rem;
     text-align: center;
     vertical-align: middle;
     text-transform: uppercase;
-    word-wrap: break-word;
-    white-space: normal;
+    white-space: nowrap;
 }
 .btncv:hover {
+	color: var(--global-theme-color)!important;
+    border-color: var(--global-theme-color)!important;
+    text-decoration: none!important;
+}
+
+
+// SKILLS
+div.skills_group {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-content: center;
+}
+div.skill {
+	display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+.skill_table {
+}
+td.skill_category {
 	color: var(--global-theme-color);
-    border-color: var(--global-theme-color);
-    text-decoration: none;
+	margin-bottom: 0.5rem;
+}
+td.skill_category_icon {
+	font-size: 0.8rem;
+	color: var(--global-theme-color);
+	width: 1.4rem;
+	padding-right: 0.4rem;
+}
+td.skill_name {
+	font-size: 0.8rem;
+}
+td.skill_level {
+	font-size: 0.8rem;
+	padding-left: 1rem;
 }
 /*******************************************************************************
  * CODING
@@ -275,27 +268,3 @@ color: rgb(0, 0, 255);
 .social .contact-icons {
     font-size: 2rem;
 }
-
-
-/*******************************************************************************
- * CODES PAGE
- ******************************************************************************/
-.repocards {
-    display: flex;
-    display: -webkit-box;
-  	display: -moz-box;
-  	display: -ms-flexbox;
-  	display: -moz-flex;
-  	display: -webkit-flex;
-    flex-flow: row wrap;
-    -webkit-flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
- }
- .repocard-single {
- 	flex: 1 1 auto;
- 	padding: 5px;
- }
- .repocard-img {
- 	max-width: 375px;
- }

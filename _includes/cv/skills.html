@@ -1,0 +1,25 @@
+<div class="skills_group">
+  {% for content in entry.contents %}
+  <div class="skill col-md-6">
+    <table class="skill_table">
+      <tbody>
+        <tr>
+      {% if content.icon %}
+          <td class="skill_category_icon"><i class="{{ content.icon }}"></i></td> 
+      {% else %}
+          <td class="skill_category_icon"></td>
+      {% endif %}
+          <td colspan="2" class="skill_category">{{ content.category }}</td>
+        </tr>
+        {% for item in content.items %}
+        <tr>
+          <td></td>
+          <td class="skill_name"><b>{{ item.name }}</b></td>
+          <td class="skill_level">{{ item.level }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endfor %}
+</div>
