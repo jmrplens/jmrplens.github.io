@@ -74,6 +74,9 @@
       department: Solar + Storage (<a href="https://power-electronics.com/en/solar/">PE Solar</a>)
       location: Lliria, Spain
       year: Apr 2023 - Current
+      description:
+        - Development on ARM architecture.
+        - Development of new functionalities and unit tests.
 
     - title: Predoctoral researcher
       institution: Polytechnic University of Valencia (<a href="http://www.upv.es/en"><b>UPV</b></a>) + Spanish National Research Council (<a href="http://www.upv.es/en"><b>CSIC</b></a>) + Hospital La Fe (<a href="https://www.iislafe.es/en/"><b>IIS</b></a>)
@@ -133,7 +136,7 @@
         - title: 'Three publications/presentations at international congresses (Euronoise and ECSSMET) and one at a national congress (Tecniacústica):'
           contents: 
             - Euronoise - <a href="/assets/pdf/paper-resources/Conferences/Euronoise/plensEuro2021.pdf">Perfect broadband sound absorber metamaterial for noise reduction in a rocket launch</a>.
-            - Euronoise - <a href="/assets/pdf/paper-resources/Conferences/Euronoise/EscartiEuro2021.pdf">Application of metamaterials to control noise scattering during space vehicle lift-off</a>
+            - Euronoise - <a href="/assets/pdf/paper-resources/Conferences/Euronoise/EscartiEuro2021.pdf">Application of metamaterials to control noise scattering during space vehicle lift-off</a>.
             - 'ECSSMET - Launch sound level characterisation and mitigation: numerical modelling framework and metamaterial proof of concept.'
             - Tecniacústica - <a href="/assets/pdf/paper-resources/Conferences/Tecniacustica/plensTEC2020.pdf">Acoustic field prediction during the launch of rockets</a>.
 
