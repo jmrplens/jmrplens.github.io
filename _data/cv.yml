@@ -1,5 +1,4 @@
 - title: General Information
-  anchor: general
   type: map
   contents:
     - name: Full Name
@@ -14,7 +13,6 @@
           name: CV PDF [ENGLISH]
 
 - title: Formal education
-  anchor: formal_education
   type: time_table
   contents:
     - title: PhD in Health and Wellness Technologies
@@ -65,9 +63,145 @@
         - link: /assets/pdf/degree/ElectronicSound.pdf
           linkname: 'Diplomas'
 
+- title: Certificates
+  type: list_groups
+  contents:
+    - category: Occupational Health and Safety
+      icon: fas fa-medkit
+      items:
+        - name: Generic
+          school: INVASSAT
+          time: 50 Hours
+          link: /assets/pdf/certificates/PRL/PRL_Generico.pdf
+          linkname: CERT
+        - name: Nanomaterials
+          school: INVASSAT
+          time: 50 Hours
+          link: /assets/pdf/certificates/PRL/PRL_Nanomateriales.pdf
+          linkname: CERT
+        - name: Chemical sector
+          school: INVASSAT
+          time: 50 Hours
+          link: /assets/pdf/certificates/PRL/PRL_Quimico.pdf
+          linkname: CERT
+        - name: Emergencies
+          school: INVASSAT
+          time: 70 Hours
+          link: /assets/pdf/certificates/PRL/PRL_Emergencias.pdf
+          linkname: CERT
+        - name: Nutrition
+          school: INVASSAT
+          time: 50 Hours
+          link: /assets/pdf/certificates/PRL/PRL_Alimentario.pdf
+          linkname: CERT
+        - name: Educational
+          school: INVASSAT
+          time: 50 Hours
+          link: /assets/pdf/certificates/PRL/PRL_Educativo.pdf
+          linkname: CERT
+        - name: Services
+          school: INVASSAT
+          time: 50 Hours
+          link: /assets/pdf/certificates/PRL/PRL_Servicios.pdf
+          linkname: CERT
+        - name: Researcher
+          school: UPV
+          time: 15 Hours
+          link: /assets/pdf/certificates/PRL/CertificadoPRLUPV.pdf
+          linkname: CERT
+
+    - category: Transversal competences
+      icon: fas fa-users
+      items:
+        - name: Gender perspective
+          school: EVES
+          time: 20 Hours
+          link: /assets/pdf/certificates/PerspectivaDeGenero.pdf
+          linkname: CERT
+        - name: Teamwork
+          school: Labora
+          time: 25 Hours
+          link: /assets/pdf/certificates/TrabajoEnEquipo.pdf
+          linkname: CERT
+        - name: Design Thinking
+          school: Labora
+          time: 25 Hours
+          link: /assets/pdf/certificates/DesignThinking.pdf
+          linkname: CERT
+        - name: Critical Thinking
+          school: Labora
+          time: 25 Hours
+          link: /assets/pdf/certificates/PensamientoCritico.pdf
+          linkname: CERT
+        - name: Adaptability, flexibility and agility
+          school: Labora
+          time: 25 Hours
+          link: /assets/pdf/certificates/AdaptacionFlexibilidadAgilidad.pdf
+          linkname: CERT
+        - name: Autonomy, innovation, ...
+          school: Labora
+          time: 25 Hours
+          link: /assets/pdf/certificates/AutonomiaInnovacion.pdf
+          linkname: CERT
+        - name: Improving profesional efficiency
+          school: Labora
+          time: 25 Hours
+          link: /assets/pdf/certificates/MejoraEficiencia.pdf
+          linkname: CERT
+        - name: Entrepreneur gender perspective
+          school: UPV
+          time: 20 Hours
+          link: /assets/pdf/certificates/EmprendimientoPerspectivaGenero.pdf
+          linkname: CERT
+    - category: Labor/Industrial
+      icon: fas fa-industry
+      items:
+        - name: Op. Industrial trucks
+          school: Gescoform
+          time: 15 Hours
+          link: /assets/pdf/certificates/Certificado_Carretilla.pdf
+          linkname: CERT
+        - name: Food Hygiene Course
+          school: Asonoman
+          time: 30 Hours
+          link: https://www.asonaman.es/files/crt/2022/10/09/CBBUWIQEBMUJKENWAKEZHYAGHKKA.pdf
+          linkname: CERT
+        - name: Self-protection plans
+          school: INVASSAT
+          time: 15 Hours
+          link: /assets/pdf/certificates/PlanesAutoproteccion.pdf
+          linkname: CERT
+        - name: Static electricity
+          school: INVASSAT
+          time: 15 Hours
+          link: /assets/pdf/certificates/ElectricidadEstatica.pdf
+          linkname: CERT
+        - name: Data privacy
+          school: CSIRT-CV
+          time: 10 Hours
+          link: /assets/pdf/certificates/ProteccionDeDatos.pdf
+          linkname: CERT
+    - category: Information technology
+      icon: fas fa-laptop-code
+      items:
+        - name: Using Python for Research
+          school: HardvardX
+          time: 50 Hours
+          link: https://courses.edx.org/certificates/f1fb6cbd6f39431c9f57c7ee3a5dc3ad
+          linkname: CERT
+        - name: Analyzing Data With Python
+          school: IBM
+          time: 20 Hours
+          link: https://courses.edx.org/certificates/62fed4c86a17427ebb5b6bbbc39e34df
+          linkname: CERT
+        - name: Visualizing Data with Python
+          school: IBM
+          time: 20 Hours
+          link: https://courses.edx.org/certificates/0f49b9baa42f4464b2e0d99ade544790
+          linkname: CERT
+
 - title: Experience
   type: time_table
-  anchor: experience
   contents:
     - title: Software Engineer I+D
       institution: Power Electronics (<a href"https://power-electronics.com/en/">PE</a>)
@@ -188,8 +322,7 @@
         - Minor responsibilities.
 
 - title: Other knowledge and skills
-  anchor: skills
-  type: skills
+  type: list_groups
   contents:
     - category: Programing languages
       icon: fas fa-code
@@ -239,7 +372,7 @@
         - name: Power Point
           level: Advanced level.
     - category: Microcontroller development
-      icon: fas fa-robot
+      icon: fas fa-microchip
       items:
         - name: Texas Instruments
           level: Intermediate level.

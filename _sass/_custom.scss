@@ -16,10 +16,6 @@ html[data-theme='dark'] {
 	/*************************************************
  	* CV
  	**************************************************/
-	table.cv {
-		background-color: transparent!important;
-	}
-	
 	.list-group-flush {
 
   		> .list-group-item-cv {
@@ -36,9 +32,6 @@ html[data-theme='dark'] {
 	.publications ol.bibliography li .abbr abbr a {
     color: var(--global-bg-color)!important;
 	}
-	.cv .card .list-group-item .badge {
-    color: var(--global-bg-color) !important;
-}
 
 }
 
@@ -94,154 +87,6 @@ div.periodical {
 	font-size: 0.9rem;
 }
 
-/*******************************************************************************
- * CV
- ******************************************************************************/
-
-
-
-// Stickers left
-span.abbrcv{
-	display: inline-block;
-	background-color: var(--global-theme-color);
-	a {
-		color: white;
-		&:hover {
-			text-decoration: none;
-		}
-	}
-}
-
-table.cv {
-		background-color: transparent!important;
-	}
-
-// 
-a.anchor {
-    display: block;
-    position: relative;
-    top: -50px;
-    visibility: hidden;
-}
-
-// List type
-
-.cvlocation{
-	font-size: 0.7rem;
-	white-space: nowrap;
-}
-.iconlocation{
-	color: var(--global-theme-color);
-	font-size: 0.8rem;
-}
-.iconinstitution{
-	color: var(--global-theme-color);
-	font-size: 0.95rem;
-	    margin-right: 0.3rem;
-}
-.icondepartment{
-	color: var(--global-theme-color);
-	font-size: 0.8rem;
-	margin-right: 0.3rem;
-}
-.tableiconcv {
-	margin-bottom: 1rem;
-    //margin-left: 2rem!important;
-} 
-td.department{
-	font-size: 0.8rem;
-}
-.containerlinkscv {
-	display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-}
-.containerlinkbutton {
-	margin-right: 0.5rem;
-}
-.containercvpdf {
-	display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.colcv{
-	padding-right: 0;
-    padding-left: 0;
-}
-
-// Courses
-.tgcv {width: auto !important;}
-.tgcv col {width: auto !important;}
-.tg-wrapcv {overflow-x: auto;-webkit-overflow-scrolling: touch;}
-.cvcourses {
-	padding-top: 0.3rem !important;
-    padding-bottom: 0.3rem!important;
-    font-size: 1rem;
-}
-.btncv {
-	color: var(--global-text-color)!important;
-    border: 1px solid var(--global-text-color)!important;
-    border-radius: 0.125rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    text-decoration: none;
-    font-weight: 400;
-    font-size: .7rem;
-    text-align: center;
-    vertical-align: middle;
-    text-transform: uppercase;
-    white-space: nowrap;
-}
-.btncv:hover {
-	color: var(--global-theme-color)!important;
-    border-color: var(--global-theme-color)!important;
-    text-decoration: none!important;
-}
-
-
-// SKILLS
-div.skills_group {
-	display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    flex-direction: row;
-    align-content: center;
-}
-div.skill {
-	display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 2rem;
-}
-.skill_table {
-}
-td.skill_category {
-	color: var(--global-theme-color);
-	margin-bottom: 0.5rem;
-}
-td.skill_category_icon {
-	font-size: 0.8rem;
-	color: var(--global-theme-color);
-	width: 1.4rem;
-	padding-right: 0.4rem;
-}
-td.skill_name {
-	font-size: 0.8rem;
-}
-td.skill_level {
-	font-size: 0.8rem;
-	padding-left: 1rem;
-}
 /*******************************************************************************
  * CODING
  ******************************************************************************/
