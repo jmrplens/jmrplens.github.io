@@ -159,6 +159,7 @@ ul.timeline li
   position: relative;
   min-height: 2.2rem;
   color: var(--global-text-color);
+  list-style-position: inside;
 }
 
 span.badge-toc {
@@ -172,14 +173,13 @@ span.badge-toc {
 ul.timeline li:before
 {
     content: "";
-    display: inline-block;
     min-height: 2.2rem;
     width: 1px;
     background: var(--global-text-color);;
     margin: 0;
     padding: 0;
     position: absolute;
-    left: -0.72rem;
+    left: 2px;
     top: -0.4rem;
     z-index: -1;
 }
@@ -191,7 +191,7 @@ ul.timeline:before
   margin: 0;
   padding: 0;
   position: relative;
-  left: -0.98rem;
+  left: -2px;
   top: 0.4rem;
   color: var(--global-text-color);
 }
@@ -203,7 +203,7 @@ ul.timeline:after
   margin: 0;
   padding: 0;
   position: relative;
-  left: -0.98rem;
+  left: -2px;
   top: -1rem;
   color: var(--global-text-color);
 }
