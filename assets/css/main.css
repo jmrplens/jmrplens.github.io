@@ -1125,7 +1125,7 @@ span.badge-toc {
   inline-size: fit-content;
 }
 
-ul.timeline li:before {
+ul.timeline li::before {
   content: "";
   min-height: 2.2rem;
   width: 1px;
@@ -1138,9 +1138,9 @@ ul.timeline li:before {
   z-index: -1;
 }
 
-ul.timeline:before {
+ul.timeline::before {
   content: "●";
-  font-size: 1rem;
+  font-size: 1em;
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -1150,9 +1150,9 @@ ul.timeline:before {
   color: var(--global-text-color);
 }
 
-ul.timeline:after {
+ul.timeline::after {
   content: "●";
-  font-size: 1rem;
+  font-size: 1em;
   display: inline-block;
   margin: 0;
   padding: 0;
