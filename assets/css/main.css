@@ -1121,6 +1121,8 @@ span.badge-toc {
   border-radius: 0.125rem;
   padding: 0.125rem 0.5rem 0.125rem 0.5rem;
   font-weight: 700 !important;
+  display: inline-block;
+  inline-size: fit-content;
 }
 
 ul.timeline li:before {
@@ -1138,6 +1140,7 @@ ul.timeline li:before {
 
 ul.timeline:before {
   content: "●";
+  font-size: 1rem;
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -1149,6 +1152,7 @@ ul.timeline:before {
 
 ul.timeline:after {
   content: "●";
+  font-size: 1rem;
   display: inline-block;
   margin: 0;
   padding: 0;
