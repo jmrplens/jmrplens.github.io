@@ -5,7 +5,7 @@ permalink: /
 subtitle: >
   <strong>PhD Student at <a href="https://www.upv.es/">UPV</a> <small>Polytechnic University of Valencia</small>
   <br> 
-  <strong>Work:</strong>  <a href="https://power-electronics.com/solar/">Power Electronics</a> <small>Software Engineer - R&D</small>
+  <strong>Work:</strong>  <a href="https://power-electronics.com/solar/">Power Electronics</a> <small>DevOps Engineer - R&D</small>
    
 
 description: I'm a researcher and PhD Student. My current interests are engineering in its broadest sense of the word and research and development in any engineering area. I love learning new disciplines and being able to contribute with my knowledge from other areas.
