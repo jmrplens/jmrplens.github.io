@@ -60,8 +60,10 @@
       location: Elche & Alicante, Spain
       year: 2009/2011
       linkitems:
-        - link: /assets/pdf/degree/ElectronicSound.pdf
-          linkname: 'Diplomas'
+        - link: /assets/pdf/degree/CFGM_Electronica.pdf
+          linkname: 'Diploma (Electronics)'
+        - link: /assets/pdf/degree/CFGS_Sonido.pdf
+          linkname: 'Diploma (Sound)'
 
 - title: Certificates
   type: list_groups
