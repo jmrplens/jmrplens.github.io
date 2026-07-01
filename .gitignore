@@ -1,0 +1,11 @@
+# build output
+dist/
+# generated types
+.astro/
+# deps
+node_modules/
+# env / logs / os
+.env
+.env.production
+*.log
+.DS_Store

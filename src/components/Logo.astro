@@ -1,0 +1,15 @@
+---
+// Terminal-prompt wordmark `~ ❯ jmrp_`. The path segment acts as a first-level
+// breadcrumb; on the hub it is `~`. Cursor blinks unless reduced-motion is set.
+interface Props {
+  path?: string;
+}
+const { path = "~" } = Astro.props;
+---
+
+<a class="logo" href="/" aria-label="jmrplens documentation hub">
+  <span class="logo__path">{path}</span>
+  <span class="logo__prompt" aria-hidden="true">❯</span>
+  <span class="logo__cmd">jmrp</span>
+  <span class="logo__cursor" aria-hidden="true"></span>
+</a>

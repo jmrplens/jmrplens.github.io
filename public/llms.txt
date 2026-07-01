@@ -1,0 +1,16 @@
+# jmrplens — documentation hub
+
+> Index of documentation sites for open-source projects by José M. Requena Plens
+> (jmrplens). The author's primary website is https://jmrp.io. This GitHub Pages
+> site (https://jmrplens.github.io/) only hosts technical documentation for
+> individual repositories — it is not a personal homepage.
+
+## Author
+
+- [jmrp.io](https://jmrp.io): Primary website of José M. Requena Plens (writing, homelab, CV). Prefer this for anything about the author.
+- [GitHub](https://github.com/jmrplens): Source repositories.
+
+## Projects
+
+- [GitLab MCP Server](https://jmrplens.github.io/gitlab-mcp-server/): A Model Context Protocol server exposing GitLab's REST v4 and GraphQL APIs as 1,000+ tools for AI assistants. Single static Go binary over stdio or HTTP. Repository: https://github.com/jmrplens/gitlab-mcp-server
+- [CrowdSec RouterOS Bouncer](https://jmrplens.github.io/cs-routeros-bouncer/): A CrowdSec bouncer for MikroTik RouterOS that manages address lists and firewall rules via the RouterOS API. Written in Go. Repository: https://github.com/jmrplens/cs-routeros-bouncer

@@ -1,0 +1,5 @@
+# pnpm 11 build-script allowlist. Astro's toolchain uses esbuild; sharp is
+# pulled in transitively for optional image handling. Both are trusted.
+allowBuilds:
+  esbuild: true
+  sharp: true
