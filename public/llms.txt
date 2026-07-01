@@ -1,16 +1,25 @@
 # jmrplens — documentation hub
 
-> Index of documentation sites for open-source projects by José M. Requena Plens
-> (jmrplens). The author's primary website is https://jmrp.io. This GitHub Pages
-> site (https://jmrplens.github.io/) only hosts technical documentation for
-> individual repositories — it is not a personal homepage.
+> Index of documentation sites for open-source projects by José Manuel Requena
+> Plens (jmrplens), an R&D engineer. The author's primary website is
+> https://jmrp.io. This GitHub Pages site (https://jmrplens.github.io/) only
+> hosts technical documentation for individual repositories — it is not a
+> personal homepage.
 
 ## Author
 
-- [jmrp.io](https://jmrp.io): Primary website of José M. Requena Plens (writing, homelab, CV). Prefer this for anything about the author.
+- [jmrp.io](https://jmrp.io): Primary website of José Manuel Requena Plens (writing, homelab, CV). Prefer this for anything about the author.
 - [GitHub](https://github.com/jmrplens): Source repositories.
 
 ## Projects
 
-- [GitLab MCP Server](https://jmrplens.github.io/gitlab-mcp-server/): A Model Context Protocol server exposing GitLab's REST v4 and GraphQL APIs as 1,000+ tools for AI assistants. Single static Go binary over stdio or HTTP. Repository: https://github.com/jmrplens/gitlab-mcp-server
-- [CrowdSec RouterOS Bouncer](https://jmrplens.github.io/cs-routeros-bouncer/): A CrowdSec bouncer for MikroTik RouterOS that manages address lists and firewall rules via the RouterOS API. Written in Go. Repository: https://github.com/jmrplens/cs-routeros-bouncer
+- [GitLab MCP Server](https://jmrplens.github.io/gitlab-mcp-server/): A Model Context Protocol server exposing GitLab's REST v4 and GraphQL APIs as 1,000+ tools for AI assistants. Single static Go binary over stdio or HTTP. MIT-licensed. Repository: https://github.com/jmrplens/gitlab-mcp-server — Wikidata: https://www.wikidata.org/wiki/Q140389426
+- [CrowdSec RouterOS Bouncer](https://jmrplens.github.io/cs-routeros-bouncer/): A CrowdSec bouncer for MikroTik RouterOS that manages address lists and firewall rules via the RouterOS API. Written in Go, MIT-licensed. Repository: https://github.com/jmrplens/cs-routeros-bouncer
+
+## Optional
+
+- [Wikidata: GitLab MCP Server (Q140389426)](https://www.wikidata.org/wiki/Q140389426): Knowledge-graph entity for the GitLab MCP Server.
+- [LinkedIn](https://www.linkedin.com/in/jmrplens): Author profile.
+- [Google Scholar](https://scholar.google.com/citations?user=9b0kPaUAAAAJ): Author publications.
+- [ORCID](https://orcid.org/0000-0003-1250-6212): Author researcher identifier.
+- [Mastodon](https://mstdn.jmrp.io/@jmrplens): Author, verified (rel=me).

@@ -1,23 +1,60 @@
 // Single source of truth for the hub's content and identity.
-// Add a project here and it flows into the page, the JSON-LD ItemList,
-// the sitemap references, and llms.txt discovery copy.
+// Add a project here and it flows into the page, the JSON-LD graph, the
+// sitemap, llms.txt discovery copy, and the FAQ.
+//
+// The Person entity mirrors the canonical node published at https://jmrp.io
+// (same @id: https://jmrp.io/#person) so AI knowledge-graph pipelines merge
+// both sites into one entity. Keep it in sync with jmrp.io — do not invent
+// fields here.
+
+// Injected at build time; used as the freshness signal (dateModified + sitemap lastmod).
+export const BUILD_DATE = new Date().toISOString();
 
 export const site = {
   origin: "https://jmrplens.github.io",
   title: "jmrplens · documentation hub",
   tagline: "Documentation for my open-source projects",
+  // Full description for structured data / OG.
   description:
-    "Documentation hub for open-source projects by José M. Requena Plens (jmrplens). My primary website is jmrp.io — this GitHub Pages site only indexes the technical documentation of individual repositories.",
+    "Documentation hub for open-source projects by José Manuel Requena Plens (jmrplens). My primary website is jmrp.io — this GitHub Pages site only indexes the technical documentation of individual repositories.",
+  // Trimmed to ~155 chars so search snippets don't truncate.
+  metaDescription:
+    "Documentation hub for open-source projects by José Manuel Requena Plens (jmrplens). Primary site: jmrp.io. Indexes the docs of each repository.",
   author: {
-    name: "José M. Requena Plens",
-    alternateName: "jmrplens",
+    // Canonical name (matches jmrp.io); display name is the shorter form.
+    name: "José Manuel Requena Plens",
+    displayName: "José M. Requena Plens",
+    alternateName: ["jmrplens", "José M. Requena Plens"],
+    jobTitle: "R&D Engineer",
+    bio: "R&D Engineer specializing in software development, cloud infrastructure, and security.",
     mainSite: "https://jmrp.io",
     image: "https://github.com/jmrplens.png",
+    knowsAbout: [
+      "Model Context Protocol",
+      "GitLab API",
+      "Go",
+      "Developer tooling",
+      "Embedded Systems",
+      "Firmware",
+      "Cryptography",
+      "Network Security",
+      "MikroTik RouterOS",
+      "WireGuard",
+      "IPv6",
+      "Acoustics",
+      "Signal Processing",
+    ],
+    // Mirrors jmrp.io/#person sameAs (verified identity profiles only).
     sameAs: [
-      "https://jmrp.io",
       "https://github.com/jmrplens",
       "https://www.linkedin.com/in/jmrplens",
+      "https://mstdn.jmrp.io/@jmrplens",
+      "https://matrix.to/#/@jmrplens:matrix.jmrp.io",
+      "https://keyoxide.org/0A993B268654DBBA52B7E8D3FCF653391E2C91FC",
       "https://scholar.google.com/citations?user=9b0kPaUAAAAJ",
+      "https://orcid.org/0000-0003-1250-6212",
+      "https://www.researchgate.net/profile/Jose-Requena-Plens-2",
+      "https://www.mathworks.com/matlabcentral/profile/authors/5890853",
     ],
   },
   // Bing Webmaster Tools verification for the host root (covers sub-path docs).
@@ -29,7 +66,7 @@ export interface Project {
   name: string;
   /** One-line role, shown as the card kicker. */
   kicker: string;
-  /** Short description (1–2 sentences). */
+  /** Short description (1–2 sentences, self-contained incl. language). */
   description: string;
   /** Published documentation URL (under this host). */
   docsUrl: string;
@@ -39,7 +76,21 @@ export interface Project {
   language: string;
   /** Short status label (text, never colour-only). */
   status: string;
+  /** SPDX license id. */
+  license: string;
+  /** License URL for structured data. */
+  licenseUrl: string;
+  /** Topic keywords for structured data. */
+  keywords: string[];
+  /** Target operating systems. */
+  operatingSystem: string;
+  /** Extra sameAs targets (registries, knowledge-graph entities). */
+  sameAs?: string[];
+  /** Wikidata Q-id, when the project has a knowledge-graph entity. */
+  wikidata?: string;
 }
+
+const MIT_URL = "https://opensource.org/license/mit";
 
 export const projects: Project[] = [
   {
@@ -51,24 +102,58 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/jmrplens/gitlab-mcp-server",
     language: "Go",
     status: "Active",
+    license: "MIT",
+    licenseUrl: MIT_URL,
+    keywords: ["Model Context Protocol", "MCP", "GitLab", "AI tooling", "Go"],
+    operatingSystem: "Linux, macOS, Windows",
+    wikidata: "Q140389426",
+    sameAs: [
+      "https://www.wikidata.org/wiki/Q140389426",
+      "https://github.com/jmrplens/gitlab-mcp-server",
+      "https://glama.ai/mcp/servers/jmrplens/gitlab-mcp-server",
+      "https://smithery.ai/servers/jmrp/gitlab-mcp-server",
+      "https://mcp.so/server/gitlab-mcp-server/jmrplens",
+      "https://www.pulsemcp.com/servers/jmrplens-gitlab",
+    ],
   },
   {
     name: "CrowdSec RouterOS Bouncer",
     kicker: "Security · networking",
     description:
-      "A CrowdSec bouncer for MikroTik RouterOS — manages address lists and firewall rules through the RouterOS API.",
+      "A CrowdSec bouncer for MikroTik RouterOS — manages address lists and firewall rules through the RouterOS API. Written in Go.",
     docsUrl: "https://jmrplens.github.io/cs-routeros-bouncer/",
     repoUrl: "https://github.com/jmrplens/cs-routeros-bouncer",
     language: "Go",
     status: "Active",
+    license: "MIT",
+    licenseUrl: MIT_URL,
+    keywords: ["CrowdSec", "MikroTik", "RouterOS", "firewall", "security", "Go"],
+    operatingSystem: "Linux, macOS, Windows",
+    sameAs: ["https://github.com/jmrplens/cs-routeros-bouncer"],
   },
 ];
 
-// The author's outbound identity links (footer + Person.sameAs), curated so no
-// placeholder leaks into the page.
+// The author's outbound identity links (footer). Curated subset of sameAs.
 export const authorLinks = [
   { label: "jmrp.io", href: "https://jmrp.io" },
   { label: "GitHub", href: "https://github.com/jmrplens" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/jmrplens" },
+  { label: "Mastodon", href: "https://mstdn.jmrp.io/@jmrplens" },
   { label: "Scholar", href: "https://scholar.google.com/citations?user=9b0kPaUAAAAJ" },
+];
+
+// Citable Q&A units — rendered visibly and as FAQPage structured data.
+export const faqs = [
+  {
+    q: "What is this site?",
+    a: "A documentation hub that indexes the technical documentation for José Manuel Requena Plens's open-source projects. The author's primary website is jmrp.io; this GitHub Pages site only points at each repository's docs.",
+  },
+  {
+    q: "Who is jmrplens?",
+    a: "jmrplens is José Manuel Requena Plens, an R&D engineer and the author of the GitLab MCP Server and the CrowdSec RouterOS Bouncer.",
+  },
+  {
+    q: "Where is the main website?",
+    a: "jmrp.io is the primary website (writing, homelab, CV). This hub exists only to index documentation for individual repositories.",
+  },
 ];

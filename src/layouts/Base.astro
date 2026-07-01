@@ -8,16 +8,48 @@ import "@fontsource/ibm-plex-mono/400.css";
 import "@fontsource/ibm-plex-mono/500.css";
 import "@fontsource/ibm-plex-mono/600.css";
 import "../styles/global.css";
+// LCP font (H1 uses Space Grotesk 700) — imported so Astro resolves the
+// fingerprinted URL for a targeted preload.
+import displayFont from "@fontsource/space-grotesk/files/space-grotesk-latin-700-normal.woff2?url";
 
-import { site, projects } from "../data/site";
+import { site, projects, faqs, BUILD_DATE } from "../data/site";
 
 const canonical = new URL(Astro.url.pathname, site.origin).href;
 const ogImage = new URL("og.png", site.origin).href;
 
-// GEO: a single @graph tying the hub to the author's primary identity (jmrp.io)
-// and to each documented project as a SoftwareSourceCode entry in an ItemList.
+// GEO: a single @graph tying the hub to the author's primary identity (jmrp.io,
+// same @id for cross-site entity merging) and to each documented project as a
+// SoftwareSourceCode entry, plus a FAQPage of citable answer units.
 const PERSON_ID = "https://jmrp.io/#person";
 const WEBSITE_ID = `${site.origin}/#website`;
+
+const softwareItems = projects.map((p, i) => {
+  const item: Record<string, unknown> = {
+    "@type": "SoftwareSourceCode",
+    name: p.name,
+    description: p.description,
+    url: p.docsUrl,
+    codeRepository: p.repoUrl,
+    programmingLanguage: p.language,
+    runtimePlatform: p.language,
+    operatingSystem: p.operatingSystem,
+    applicationCategory: "DeveloperApplication",
+    license: p.licenseUrl,
+    keywords: p.keywords,
+    dateModified: BUILD_DATE,
+    author: { "@id": PERSON_ID },
+  };
+  if (p.sameAs) item.sameAs = p.sameAs;
+  if (p.wikidata) {
+    item.identifier = {
+      "@type": "PropertyValue",
+      propertyID: "Wikidata",
+      value: p.wikidata,
+    };
+  }
+  return { "@type": "ListItem", position: i + 1, url: p.docsUrl, item };
+});
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -28,7 +60,10 @@ const jsonLd = {
       alternateName: site.author.alternateName,
       url: site.author.mainSite,
       image: site.author.image,
-      sameAs: [...site.author.sameAs],
+      jobTitle: site.author.jobTitle,
+      description: site.author.bio,
+      knowsAbout: site.author.knowsAbout,
+      sameAs: site.author.sameAs,
     },
     {
       "@type": "WebSite",
@@ -37,6 +72,7 @@ const jsonLd = {
       name: site.title,
       description: site.description,
       inLanguage: "en",
+      dateModified: BUILD_DATE,
       publisher: { "@id": PERSON_ID },
       about: { "@id": PERSON_ID },
     },
@@ -51,7 +87,11 @@ const jsonLd = {
       mainEntity: { "@id": PERSON_ID },
       primaryImageOfPage: ogImage,
       inLanguage: "en",
-      // The author's primary website is the canonical destination.
+      dateModified: BUILD_DATE,
+      speakable: {
+        "@type": "SpeakableSpecification",
+        cssSelector: ["h1", ".intro"],
+      },
       significantLink: [site.author.mainSite, ...projects.map((p) => p.docsUrl)],
     },
     {
@@ -59,19 +99,15 @@ const jsonLd = {
       "@id": `${site.origin}/#projects`,
       name: "Documented projects",
       numberOfItems: projects.length,
-      itemListElement: projects.map((p, i) => ({
-        "@type": "ListItem",
-        position: i + 1,
-        url: p.docsUrl,
-        item: {
-          "@type": "SoftwareSourceCode",
-          name: p.name,
-          description: p.description,
-          url: p.docsUrl,
-          codeRepository: p.repoUrl,
-          programmingLanguage: p.language,
-          author: { "@id": PERSON_ID },
-        },
+      itemListElement: softwareItems,
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${site.origin}/#faq`,
+      mainEntity: faqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
       })),
     },
   ],
@@ -84,17 +120,21 @@ const jsonLd = {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{site.title}</title>
-    <meta name="description" content={site.description} />
+    <meta name="description" content={site.metaDescription} />
     <link rel="canonical" href={canonical} />
     <meta name="author" content={site.author.name} />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- Theme colour swaps with the active theme (see inline script + toggle). -->
-    <meta name="theme-color" content="#0A0A0B" />
+    <!-- Per-scheme browser chrome colour (pre-paint, works without JS). -->
+    <meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0A0A0B" media="(prefers-color-scheme: dark)" />
     <meta name="color-scheme" content="dark light" />
 
     <!-- Bing Webmaster Tools verification for the host root. -->
     <meta name="msvalidate.01" content={site.bingVerify} />
+
+    <!-- Preload the LCP display font (H1) only. -->
+    <link rel="preload" href={displayFont} as="font" type="font/woff2" crossorigin />
 
     <!-- Open Graph / Twitter -->
     <meta property="og:type" content="profile" />
@@ -107,7 +147,7 @@ const jsonLd = {
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={site.title} />
-    <meta name="twitter:description" content={site.description} />
+    <meta name="twitter:description" content={site.metaDescription} />
     <meta name="twitter:image" content={ogImage} />
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -122,10 +162,7 @@ const jsonLd = {
         try {
           const stored = localStorage.getItem("theme");
           const prefersLight = matchMedia("(prefers-color-scheme: light)").matches;
-          const theme = stored ?? (prefersLight ? "light" : "dark");
-          document.documentElement.dataset.theme = theme;
-          const meta = document.querySelector('meta[name="theme-color"]');
-          if (meta) meta.setAttribute("content", theme === "light" ? "#FAFAF7" : "#0A0A0B");
+          document.documentElement.dataset.theme = stored ?? (prefersLight ? "light" : "dark");
         } catch (e) {
           /* default dark */
         }

@@ -1,16 +1,25 @@
 # jmrplens.github.io — all crawlers welcome, including AI / generative-engine crawlers.
 User-agent: *
+# Explicit machine-readable intent (IETF draft-romm-aipref-contentsignals):
+Content-Signal: ai-train=yes, search=yes, ai-retrieval=yes
 Allow: /
 
+# AI / generative-engine crawlers (explicitly welcomed for GEO).
 User-agent: GPTBot
 Allow: /
 User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
 Allow: /
 User-agent: ClaudeBot
 Allow: /
 User-agent: PerplexityBot
 Allow: /
 User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: Amazonbot
 Allow: /
 User-agent: CCBot
 Allow: /

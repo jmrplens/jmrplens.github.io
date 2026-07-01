@@ -470,6 +470,41 @@ p {
   height: 15px;
 }
 
+/* ---- FAQ ------------------------------------------------------------------- */
+.section--faq {
+  border-top: 1px solid var(--hair);
+}
+.faq {
+  margin: 0;
+  display: grid;
+  gap: 14px;
+  max-width: 760px;
+}
+.faq__item {
+  padding: 20px 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.faq dt {
+  font-family: var(--ff-display);
+  font-weight: 700;
+  color: var(--heading);
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+.faq dd {
+  margin: 8px 0 0;
+  font-size: 15px;
+  color: var(--body);
+}
+.faq dd a {
+  color: var(--heading);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 3px;
+}
+
 /* ---- pills / tags ---------------------------------------------------------- */
 .pill {
   display: inline-flex;

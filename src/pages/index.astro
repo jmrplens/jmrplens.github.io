@@ -3,9 +3,14 @@ import Base from "../layouts/Base.astro";
 import Logo from "../components/Logo.astro";
 import ThemeToggle from "../components/ThemeToggle.astro";
 import ProjectCard from "../components/ProjectCard.astro";
-import { site, projects, authorLinks } from "../data/site";
+import { site, projects, authorLinks, faqs, BUILD_DATE } from "../data/site";
 
 const year = new Date().getFullYear();
+const updated = new Date(BUILD_DATE).toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "short",
+});
+const updatedISO = BUILD_DATE.slice(0, 10);
 ---
 
 <Base>
@@ -38,8 +43,9 @@ const year = new Date().getFullYear();
       <div class="wrap hero__inner">
         <p class="kicker">documentation hub</p>
         <h1>Documentation for my open-source projects.</h1>
-        <p class="hero__lead">
-          I'm <strong>José M. Requena Plens</strong> (<span style="font-family:var(--ff-mono)">jmrplens</span>).
+        <p class="hero__lead intro">
+          I'm <strong>José M. Requena Plens</strong> (<span style="font-family:var(--ff-mono)">jmrplens</span>),
+          an R&amp;D engineer building open-source developer and infrastructure tooling.
           This site indexes the technical documentation of my repositories, hosted on GitHub Pages.
           For everything else — writing, homelab, CV — my main website is <strong>jmrp.io</strong>.
         </p>
@@ -76,6 +82,24 @@ const year = new Date().getFullYear();
         </div>
       </div>
     </section>
+
+    <!-- FAQ / citable answer units -->
+    <section class="section section--faq" id="about">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="kicker">about</p>
+          <h2>Frequently asked</h2>
+        </div>
+        <dl class="faq">
+          {faqs.map((f) => (
+            <div class="faq__item">
+              <dt>{f.q}</dt>
+              <dd set:html={f.a.replace(/jmrp\.io/g, '<a href="https://jmrp.io">jmrp.io</a>')} />
+            </div>
+          ))}
+        </dl>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -83,7 +107,9 @@ const year = new Date().getFullYear();
       <nav class="site-footer__links" aria-label="Elsewhere">
         {authorLinks.map((l) => <a href={l.href} rel="me noopener">{l.label}</a>)}
       </nav>
-      <p class="site-footer__meta">© {year} {site.author.name} · built with Astro</p>
+      <p class="site-footer__meta">
+        © {year} {site.author.name} · <time datetime={updatedISO}>Updated {updated}</time> · built with Astro
+      </p>
     </div>
   </footer>
 </Base>
