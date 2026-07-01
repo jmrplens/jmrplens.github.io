@@ -128,8 +128,13 @@ export const projects: Project[] = [
     license: "MIT",
     licenseUrl: MIT_URL,
     keywords: ["CrowdSec", "MikroTik", "RouterOS", "firewall", "security", "Go"],
-    operatingSystem: "Linux, macOS, Windows",
-    sameAs: ["https://github.com/jmrplens/cs-routeros-bouncer"],
+    operatingSystem: "Linux, macOS, Windows, FreeBSD",
+    wikidata: "Q140393352",
+    sameAs: [
+      "https://www.wikidata.org/wiki/Q140393352",
+      "https://github.com/jmrplens/cs-routeros-bouncer",
+      "https://app.crowdsec.net/hub/author/jmrplens/remediation-components/cs-routeros-bouncer",
+    ],
   },
 ];
 
