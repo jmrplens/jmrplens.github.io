@@ -134,6 +134,13 @@
         margin: 0 0 0.35rem;
         font-size: 1.15rem;
       }
+      .card h3 a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .card:hover h3 a {
+        color: var(--accent);
+      }
       .card p {
         margin: 0 0 0.6rem;
         color: var(--muted);
@@ -185,8 +192,8 @@
 
       <h2>Projects</h2>
 
-      <a class="card" href="https://jmrplens.github.io/gitlab-mcp-server/">
-        <h3>GitLab MCP Server</h3>
+      <article class="card">
+        <h3><a href="https://jmrplens.github.io/gitlab-mcp-server/">GitLab MCP Server</a></h3>
         <p>
           A Model Context Protocol (MCP) server that exposes GitLab's REST v4 and GraphQL APIs as
           1,000+ tools for AI assistants — a single static Go binary over stdio or HTTP.
@@ -195,7 +202,52 @@
           ><a href="https://jmrplens.github.io/gitlab-mcp-server/">Documentation →</a
           ><a href="https://github.com/jmrplens/gitlab-mcp-server">GitHub</a></span
         >
-      </a>
+      </article>
+
+      <article class="card">
+        <h3><a href="https://jmrplens.github.io/redmine-mcp-server/">Redmine MCP Server</a></h3>
+        <p>
+          A Model Context Protocol (MCP) server for Redmine — 152 tools (35 in meta mode), 20
+          resources and 28 prompts for AI assistants. Go, single static binary, stdio and HTTP.
+        </p>
+        <span class="links"
+          ><a href="https://jmrplens.github.io/redmine-mcp-server/">Documentation →</a
+          ><a href="https://github.com/jmrplens/redmine-mcp-server">GitHub</a></span
+        >
+      </article>
+
+      <article class="card">
+        <h3><a href="https://jmrplens.github.io/a11y-diagrams/">a11y-diagrams</a></h3>
+        <p>Accessible, zero-runtime diagrams for Astro, Vue and Web Components.</p>
+        <span class="links"
+          ><a href="https://jmrplens.github.io/a11y-diagrams/">Documentation →</a
+          ><a href="https://github.com/jmrplens/a11y-diagrams">GitHub</a></span
+        >
+      </article>
+
+      <article class="card">
+        <h3><a href="https://jmrplens.github.io/cs-routeros-bouncer/">CrowdSec RouterOS Bouncer</a></h3>
+        <p>
+          A CrowdSec bouncer for MikroTik RouterOS — manages address lists and firewall rules via the
+          RouterOS API. Written in Go.
+        </p>
+        <span class="links"
+          ><a href="https://jmrplens.github.io/cs-routeros-bouncer/">Documentation →</a
+          ><a href="https://github.com/jmrplens/cs-routeros-bouncer">GitHub</a></span
+        >
+      </article>
+
+      <article class="card">
+        <h3><a href="https://jmrplens.github.io/kleidos/">Kleidos</a></h3>
+        <p>
+          A hardware BLE password manager for ESP32-S3 boards (M5StickC Plus2, StickS3, M5Stack Gray,
+          T-Deck, Cardputer).
+        </p>
+        <span class="links"
+          ><a href="https://jmrplens.github.io/kleidos/">Documentation →</a
+          ><a href="https://github.com/jmrplens/kleidos">GitHub</a></span
+        >
+      </article>
 
       <h2>Elsewhere</h2>
       <p><a class="cta" href="https://jmrp.io">Visit jmrp.io →</a></p>
