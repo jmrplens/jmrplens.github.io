@@ -59,6 +59,8 @@ export const site = {
   },
   // Bing Webmaster Tools verification for the host root (covers sub-path docs).
   bingVerify: "7574EB3B44624C239F14920DBC34EE25",
+  // Google Search Console verification for the host root (covers sub-path docs).
+  googleVerify: "4Hx_PJ1seU_BgKfWpo_FA7_Hkh7GeYVNrvnvzqCjF0Q",
 } as const;
 
 export interface Project {
