@@ -152,9 +152,9 @@ export const projects: Project[] = [
     licenseUrl: MIT_URL,
     keywords: ["acoustics", "DSP", "octave bands", "IEC 61672", "sound level", "Python"],
     operatingSystem: "Linux, macOS, Windows",
-    wikidata: "Q140455472",
+    wikidata: "Q140451720",
     sameAs: [
-      "https://www.wikidata.org/wiki/Q140455472",
+      "https://www.wikidata.org/wiki/Q140451720",
       "https://github.com/jmrplens/phonometry",
       "https://pypi.org/project/phonometry/",
       "https://doi.org/10.5281/zenodo.21215280",
