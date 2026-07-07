@@ -46,7 +46,6 @@ export const site = {
     ],
     // Mirrors jmrp.io/#person sameAs (verified identity profiles only).
     sameAs: [
-      "http://www.wikidata.org/entity/Q140455276",
       "https://github.com/jmrplens",
       "https://www.linkedin.com/in/jmrplens",
       "https://mstdn.jmrp.io/@jmrplens",
@@ -89,8 +88,6 @@ export interface Project {
   operatingSystem: string;
   /** Extra sameAs targets (registries, knowledge-graph entities). */
   sameAs?: string[];
-  /** Wikidata Q-id, when the project has a knowledge-graph entity. */
-  wikidata?: string;
 }
 
 const MIT_URL = "https://opensource.org/license/mit";
@@ -109,9 +106,7 @@ export const projects: Project[] = [
     licenseUrl: MIT_URL,
     keywords: ["Model Context Protocol", "MCP", "GitLab", "AI tooling", "Go"],
     operatingSystem: "Linux, macOS, Windows",
-    wikidata: "Q140389426",
     sameAs: [
-      "https://www.wikidata.org/wiki/Q140389426",
       "https://github.com/jmrplens/gitlab-mcp-server",
       "https://glama.ai/mcp/servers/jmrplens/gitlab-mcp-server",
       "https://smithery.ai/servers/jmrp/gitlab-mcp-server",
@@ -132,9 +127,7 @@ export const projects: Project[] = [
     licenseUrl: MIT_URL,
     keywords: ["CrowdSec", "MikroTik", "RouterOS", "firewall", "security", "Go"],
     operatingSystem: "Linux, macOS, Windows, FreeBSD",
-    wikidata: "Q140393352",
     sameAs: [
-      "https://www.wikidata.org/wiki/Q140393352",
       "https://github.com/jmrplens/cs-routeros-bouncer",
       "https://app.crowdsec.net/hub/author/jmrplens/remediation-components/cs-routeros-bouncer",
     ],
@@ -152,9 +145,7 @@ export const projects: Project[] = [
     licenseUrl: MIT_URL,
     keywords: ["acoustics", "DSP", "octave bands", "IEC 61672", "sound level", "Python"],
     operatingSystem: "Linux, macOS, Windows",
-    wikidata: "Q140451720",
     sameAs: [
-      "https://www.wikidata.org/wiki/Q140451720",
       "https://github.com/jmrplens/phonometry",
       "https://pypi.org/project/phonometry/",
       "https://doi.org/10.5281/zenodo.21215280",
@@ -173,9 +164,7 @@ export const projects: Project[] = [
     licenseUrl: MIT_URL,
     keywords: ["Cloudflare", "DNS", "DDNS", "dynamic DNS", "Bash", "IPv6"],
     operatingSystem: "Linux, macOS, BSD",
-    wikidata: "Q140447586",
     sameAs: [
-      "https://www.wikidata.org/wiki/Q140447586",
       "https://github.com/jmrplens/Cloudflare-DNS-Updater",
     ],
   },

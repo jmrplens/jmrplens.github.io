@@ -13,13 +13,11 @@
 
 ## Projects
 
-- [GitLab MCP Server](https://jmrplens.github.io/gitlab-mcp-server/): A Model Context Protocol server exposing GitLab's REST v4 and GraphQL APIs as 1,000+ tools for AI assistants. Single static Go binary over stdio or HTTP. MIT-licensed. Repository: https://github.com/jmrplens/gitlab-mcp-server — Wikidata: https://www.wikidata.org/wiki/Q140389426
-- [CrowdSec RouterOS Bouncer](https://jmrplens.github.io/cs-routeros-bouncer/): A CrowdSec bouncer for MikroTik RouterOS that manages address lists and firewall rules via the RouterOS API. Written in Go, MIT-licensed. Repository: https://github.com/jmrplens/cs-routeros-bouncer — Wikidata: https://www.wikidata.org/wiki/Q140393352
+- [GitLab MCP Server](https://jmrplens.github.io/gitlab-mcp-server/): A Model Context Protocol server exposing GitLab's REST v4 and GraphQL APIs as 1,000+ tools for AI assistants. Single static Go binary over stdio or HTTP. MIT-licensed. Repository: https://github.com/jmrplens/gitlab-mcp-server
+- [CrowdSec RouterOS Bouncer](https://jmrplens.github.io/cs-routeros-bouncer/): A CrowdSec bouncer for MikroTik RouterOS that manages address lists and firewall rules via the RouterOS API. Written in Go, MIT-licensed. Repository: https://github.com/jmrplens/cs-routeros-bouncer
 
 ## Optional
 
-- [Wikidata: GitLab MCP Server (Q140389426)](https://www.wikidata.org/wiki/Q140389426): Knowledge-graph entity for the GitLab MCP Server.
-- [Wikidata: CrowdSec RouterOS Bouncer (Q140393352)](https://www.wikidata.org/wiki/Q140393352): Knowledge-graph entity for the CrowdSec RouterOS Bouncer.
 - [LinkedIn](https://www.linkedin.com/in/jmrplens): Author profile.
 - [Google Scholar](https://scholar.google.com/citations?user=9b0kPaUAAAAJ): Author publications.
 - [ORCID](https://orcid.org/0000-0003-1250-6212): Author researcher identifier.
