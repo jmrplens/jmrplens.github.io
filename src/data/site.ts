@@ -139,6 +139,27 @@ export const projects: Project[] = [
       "https://app.crowdsec.net/hub/author/jmrplens/remediation-components/cs-routeros-bouncer",
     ],
   },
+  {
+    name: "phonometry",
+    kicker: "Acoustics · DSP",
+    description:
+      "Acoustic measurement toolkit for Python: fractional octave-band filter banks, A/C/Z and time weighting, and sound level metrology — conformance-tested against IEC 61260-1 and IEC 61672-1. Formerly PyOctaveBand.",
+    docsUrl: "https://jmrplens.github.io/phonometry/",
+    repoUrl: "https://github.com/jmrplens/phonometry",
+    language: "Python",
+    status: "Active",
+    license: "MIT",
+    licenseUrl: MIT_URL,
+    keywords: ["acoustics", "DSP", "octave bands", "IEC 61672", "sound level", "Python"],
+    operatingSystem: "Linux, macOS, Windows",
+    wikidata: "Q140455472",
+    sameAs: [
+      "https://www.wikidata.org/wiki/Q140455472",
+      "https://github.com/jmrplens/phonometry",
+      "https://pypi.org/project/phonometry/",
+      "https://doi.org/10.5281/zenodo.21215280",
+    ],
+  },
 ];
 
 // The author's outbound identity links (footer). Curated subset of sameAs.
