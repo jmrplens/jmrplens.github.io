@@ -40,13 +40,6 @@ const softwareItems = projects.map((p, i) => {
     author: { "@id": PERSON_ID },
   };
   if (p.sameAs) item.sameAs = p.sameAs;
-  if (p.wikidata) {
-    item.identifier = {
-      "@type": "PropertyValue",
-      propertyID: "Wikidata",
-      value: p.wikidata,
-    };
-  }
   return { "@type": "ListItem", position: i + 1, url: p.docsUrl, item };
 });
 
