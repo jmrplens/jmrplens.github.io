@@ -160,6 +160,25 @@ export const projects: Project[] = [
       "https://doi.org/10.5281/zenodo.21215280",
     ],
   },
+  {
+    name: "Cloudflare DNS Updater",
+    kicker: "Networking · DDNS",
+    description:
+      "Dynamic DNS for Cloudflare in pure Bash — creates, updates or deletes IPv4/IPv6 records with per-record settings, notifications, and no runtime dependencies.",
+    docsUrl: "https://jmrplens.github.io/Cloudflare-DNS-Updater/",
+    repoUrl: "https://github.com/jmrplens/Cloudflare-DNS-Updater",
+    language: "Bash",
+    status: "Active",
+    license: "MIT",
+    licenseUrl: MIT_URL,
+    keywords: ["Cloudflare", "DNS", "DDNS", "dynamic DNS", "Bash", "IPv6"],
+    operatingSystem: "Linux, macOS, BSD",
+    wikidata: "Q140447586",
+    sameAs: [
+      "https://www.wikidata.org/wiki/Q140447586",
+      "https://github.com/jmrplens/Cloudflare-DNS-Updater",
+    ],
+  },
 ];
 
 // The author's outbound identity links (footer). Curated subset of sameAs.
