@@ -46,6 +46,7 @@ export const site = {
     ],
     // Mirrors jmrp.io/#person sameAs (verified identity profiles only).
     sameAs: [
+      "http://www.wikidata.org/entity/Q140455276",
       "https://github.com/jmrplens",
       "https://www.linkedin.com/in/jmrplens",
       "https://mstdn.jmrp.io/@jmrplens",

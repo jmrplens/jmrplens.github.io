@@ -122,6 +122,11 @@ const jsonLd = {
     <title>{site.title}</title>
     <meta name="description" content={site.metaDescription} />
     <link rel="canonical" href={canonical} />
+    <!-- Identity: this hub belongs to the person whose canonical site is jmrp.io -->
+    <link
+      rel="me"
+      href="https://jmrp.io/"
+    />
     <meta name="author" content={site.author.name} />
     <meta name="generator" content={Astro.generator} />
 
