@@ -115,6 +115,23 @@ export const projects: Project[] = [
     ],
   },
   {
+    name: "LibGen MCP",
+    kicker: "MCP server · AI tooling",
+    description:
+      "A Model Context Protocol server that searches and downloads books, research papers, comics and standards from Library Genesis — a single static Go binary over stdio or HTTP, no account required.",
+    docsUrl: "https://jmrplens.github.io/libgen-mcp/",
+    repoUrl: "https://github.com/jmrplens/libgen-mcp",
+    language: "Go",
+    status: "Active",
+    license: "MIT",
+    licenseUrl: MIT_URL,
+    keywords: ["Model Context Protocol", "MCP", "Library Genesis", "libgen", "books", "AI tooling", "Go"],
+    operatingSystem: "Linux, macOS, Windows",
+    sameAs: [
+      "https://github.com/jmrplens/libgen-mcp",
+    ],
+  },
+  {
     name: "CrowdSec RouterOS Bouncer",
     kicker: "Security · networking",
     description:
