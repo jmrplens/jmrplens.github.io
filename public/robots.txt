@@ -24,4 +24,6 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
+# Hub index (project homepages) plus each project's own deep per-page sitemap.
 Sitemap: https://jmrplens.github.io/sitemap.xml
+Sitemap: https://jmrplens.github.io/libgen-mcp/sitemap-index.xml
