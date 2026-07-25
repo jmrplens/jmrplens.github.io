@@ -25,30 +25,37 @@ export const site = {
     name: "José Manuel Requena Plens",
     displayName: "José M. Requena Plens",
     alternateName: ["jmrplens", "José M. Requena Plens"],
-    jobTitle: "R&D Engineer",
-    bio: "R&D Engineer specializing in software development, cloud infrastructure, and security.",
+    // jobTitle and bio are copied verbatim from jmrp.io/#person. Both sites
+    // publish the same @id, so a difference here is not a variation — it is two
+    // contradictory claims about one entity, which weakens it instead of
+    // reinforcing it.
+    jobTitle: "R&D · Firmware & Software Engineer",
+    bio: "Firmware and software engineer in Valencia, Spain — industrial embedded systems, open-source tooling, and self-hosted infrastructure.",
     mainSite: "https://jmrp.io",
     image: "https://github.com/jmrplens.png",
+    // Wikidata-linked, like jmrp.io's, so each topic resolves to a known entity
+    // instead of being matched on its label.
     knowsAbout: [
-      "Model Context Protocol",
-      "GitLab API",
-      "Go",
-      "Developer tooling",
-      "Embedded Systems",
-      "Firmware",
-      "Cryptography",
-      "Network Security",
-      "MikroTik RouterOS",
-      "WireGuard",
-      "IPv6",
-      "Acoustics",
-      "Signal Processing",
+      { "@type": "Thing", name: "Model Context Protocol", "@id": "http://www.wikidata.org/entity/Q133436854" },
+      { "@type": "Thing", name: "GitLab", "@id": "http://www.wikidata.org/entity/Q16639197" },
+      { "@type": "Thing", name: "Go", "@id": "http://www.wikidata.org/entity/Q37227" },
+      { "@type": "Thing", name: "Programming tool", "@id": "http://www.wikidata.org/entity/Q1077784" },
+      { "@type": "Thing", name: "Embedded system", "@id": "http://www.wikidata.org/entity/Q193040" },
+      { "@type": "Thing", name: "Firmware", "@id": "http://www.wikidata.org/entity/Q104851" },
+      { "@type": "Thing", name: "Cryptography", "@id": "http://www.wikidata.org/entity/Q8789" },
+      { "@type": "Thing", name: "Network security", "@id": "http://www.wikidata.org/entity/Q989632" },
+      { "@type": "Thing", name: "MikroTik RouterOS", "@id": "http://www.wikidata.org/entity/Q12036888" },
+      { "@type": "Thing", name: "WireGuard", "@id": "http://www.wikidata.org/entity/Q28975568" },
+      { "@type": "Thing", name: "IPv6", "@id": "http://www.wikidata.org/entity/Q2551624" },
+      { "@type": "Thing", name: "Acoustics", "@id": "http://www.wikidata.org/entity/Q82811" },
+      { "@type": "Thing", name: "Signal processing", "@id": "http://www.wikidata.org/entity/Q208163" },
     ],
     // Mirrors jmrp.io/#person sameAs (verified identity profiles only).
     sameAs: [
       "https://github.com/jmrplens",
       "https://www.linkedin.com/in/jmrplens",
       "https://mstdn.jmrp.io/@jmrplens",
+      "https://bsky.app/profile/jmrp.io",
       "https://matrix.to/#/@jmrplens:matrix.jmrp.io",
       "https://keyoxide.org/0A993B268654DBBA52B7E8D3FCF653391E2C91FC",
       "https://scholar.google.com/citations?user=9b0kPaUAAAAJ",

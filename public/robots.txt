@@ -1,7 +1,10 @@
 # jmrplens.github.io — all crawlers welcome, including AI / generative-engine crawlers.
 User-agent: *
-# Explicit machine-readable intent (IETF draft-romm-aipref-contentsignals):
-Content-Signal: ai-train=yes, search=yes, ai-retrieval=yes
+# Explicit machine-readable intent (IETF draft-romm-aipref-contentsignals).
+# `ai-input` and `ai-retrieval` name the same grounding/RAG use: the IETF draft
+# uses one token and contentsignals.org publishes the other, so both are declared
+# rather than betting on which vocabulary a given parser implements.
+Content-Signal: search=yes, ai-train=yes, ai-input=yes, ai-retrieval=yes
 Allow: /
 
 # AI / generative-engine crawlers (explicitly welcomed for GEO).
@@ -23,7 +26,27 @@ User-agent: Amazonbot
 Allow: /
 User-agent: CCBot
 Allow: /
+User-agent: Meta-ExternalAgent
+Allow: /
+User-agent: Google-CloudVertexBot
+Allow: /
+User-agent: Bytespider
+Allow: /
+User-agent: Diffbot
+Allow: /
+User-agent: Timpibot
+Allow: /
+User-agent: omgili
+Allow: /
 
 # Hub index (project homepages) plus each project's own deep per-page sitemap.
+# Every project that publishes one is listed: the hub index only carries the
+# project homepages, so a sitemap left out here hides that project's inner pages
+# from anything that discovers URLs through robots.txt.
 Sitemap: https://jmrplens.github.io/sitemap.xml
 Sitemap: https://jmrplens.github.io/libgen-mcp/sitemap-index.xml
+Sitemap: https://jmrplens.github.io/gitlab-mcp-server/sitemap-index.xml
+Sitemap: https://jmrplens.github.io/phonometry/sitemap-index.xml
+Sitemap: https://jmrplens.github.io/Cloudflare-DNS-Updater/sitemap-index.xml
+Sitemap: https://jmrplens.github.io/cs-routeros-bouncer/sitemap-index.xml
+Sitemap: https://jmrplens.github.io/portainer-mcp-enhanced/sitemap-index.xml
