@@ -13,6 +13,7 @@ import "../styles/global.css";
 import displayFont from "@fontsource/space-grotesk/files/space-grotesk-latin-700-normal.woff2?url";
 
 import { site, projects, faqs, BUILD_DATE } from "../data/site";
+import { personNode } from "../data/identity";
 
 const canonical = new URL(Astro.url.pathname, site.origin).href;
 const ogImage = new URL("og.png", site.origin).href;
@@ -37,7 +38,11 @@ const softwareItems = projects.map((p, i) => {
     license: p.licenseUrl,
     keywords: p.keywords,
     dateModified: BUILD_DATE,
+    // Same three agents jmrp.io/projects/ emits for these @ids, so the merged
+    // node states one consistent set instead of a partial one per document.
     author: { "@id": PERSON_ID },
+    creator: { "@id": PERSON_ID },
+    maintainer: { "@id": PERSON_ID },
   };
   if (p.sameAs) item.sameAs = p.sameAs;
   return { "@type": "ListItem", position: i + 1, url: p.docsUrl, item };
@@ -46,18 +51,11 @@ const softwareItems = projects.map((p, i) => {
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Person",
-      "@id": PERSON_ID,
-      name: site.author.name,
-      alternateName: site.author.alternateName,
-      url: site.author.mainSite,
-      image: site.author.image,
-      jobTitle: site.author.jobTitle,
-      description: site.author.bio,
-      knowsAbout: site.author.knowsAbout,
-      sameAs: site.author.sameAs,
-    },
+    // The canonical Person entity, fetched at build time from jmrp.io — see
+    // ../data/identity.ts. Spliced verbatim so this document and the portfolio
+    // describe the same node with the same values, instead of two
+    // hand-maintained copies that drift.
+    personNode,
     {
       "@type": "WebSite",
       "@id": WEBSITE_ID,
