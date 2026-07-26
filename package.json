@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "identity:sync": "node scripts/sync-identity.mjs",
     "preview": "astro preview",
     "check": "astro check"
   },
